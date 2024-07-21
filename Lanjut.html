@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Pemesanan Bus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .contact-info {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .route-list {
+            margin-top: 20px;
+        }
+        .route-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .route-list ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Info Pemesanan Bus</h1>
+        
+        <h2>Cara Pemesanan</h2>
+        <p>Untuk memesan tiket bus, silakan lengkapi formulir pemesanan kami dan tekan tombol "Pesan Tiket". Pastikan untuk mengisi semua informasi yang diperlukan dengan benar.</p>
+        
+        <h2>Daftar Rute Bus</h2>
+        <div class="route-list">
+            <ul>
+                
+                <li >Cirebon - Jakarta Bisnis Rp. 120.000 - Ekonomi Rp. 100.000</li> 
+                <li>Cirebon - Merak Bisnis Rp. 120.000 - Ekonomi Rp. 100.000</li>
+                <li>Merak - Cirebon Bisnis Rp. 120.000 - Ekonomi Rp. 100.000</li>
+                <li>Jakarta - Cirebon Bisnis Rp. 120.000 - Ekonomi Rp. 100.000</li>
+                <!-- tambahkan rute-rute lainnya -->
+            
+            </ul>
+        </div>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                padding: 20px;
+            
+            }
+            form {
+                max-width: 600px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            label, input, select {
+                display: block;
+                margin-bottom: 10px;
+            }
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Pesan Tempat Duduk Bus</h2>
+        <form action="bayarqris.html" method="post">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="tanggal_berangkat">Tanggal Berangkat:</label>
+            <input type="date" id="tanggal_berangkat" name="tanggal_berangkat" required>
+    
+            <label for="jumlah_tiket">Jumlah Tiket:</label>
+            <input type="number" id="jumlah_tiket" name="jumlah_tiket" min="1" required>
+    
+            <label for="nomor_kursi">Nomor Kursi:</label>
+            <input type="text" id="nomor_kursi" name="nomor_kursi" required>
+    
+            <label for="kelas">Kelas:</label>
+            <select id="kelas" name="kelas" required>
+                <option value="">Pilih Kelas</option>
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Bisnis">Bisnis</option>
+                
+            </select>
+    
+            <a href="pembayaranqris.html" type="submit">pembayaranqris</a>
+        </form> 
+    </body>
+</head>
+<body>
+
+    
+    <p><a href="index.html" >Kembali ke Halaman Sebelumnya</a></p>
+    
+    <p>Atau, Anda bisa kembali ke <a href="index.html">Halaman Utama</a>.</p>
+</body>
+</html>
+
+
+
+        
+       

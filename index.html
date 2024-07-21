@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pemesanan Tiket Bus Online</title>
+        <style>
+            *{
+                font-family: 'Times New Roman', Times, serif;
+                text-shadow: gold 2px 0px 2px;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                padding: 20px;
+                background-image: url(bus\ walpaper.jpg);
+                background-size: cover;
+            }
+            form {
+                max-width: 600px;
+                margin: auto;
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+            }
+            label, input, select {
+                display: block;
+                margin-bottom: 10px;
+            }
+            input[type="submit"] {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+            h2{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 class="tiket">Pemesanan Tiket Bus Online</h2>
+        <form action="Lanjut.html" method="post">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+    
+            <label for="telepon">Nomor Telepon:</label>
+            <input type="tel" id="telepon" name="telepon" required>
+    
+    
+            <label for="jumlah_tiket" >Jumlah Tiket:</label>
+            <input type="number" id="jumlah_tiket" name="jumlah_tiket" min="1" required>
+    
+            <label for="tujuan">Tujuan:</label>
+            <select id="tujuan" name="tujuan" required>
+                <option value="">Pilih Tujuan</option>
+                <option value="Jakarta">Cirebon</option>
+                <option value="Bandung">Jakarta</option>
+                <option value="Surabaya">Merak</option>
+    
+            </select>
+            <a href="Lanjut.html" type="submit">Lanjut</a>
+    
+           
+        </form>
+    </body>
+    </html>
+    
+</body>
+</html>
+
+
+

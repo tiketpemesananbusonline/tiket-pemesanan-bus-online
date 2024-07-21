@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Payment</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>Bus Ticket Payment</h1>
+    <form id="payment-form">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="busNumber">No Kursi:</label>
+        <input type="text" id="busNumber" name="busNumber" required><br><br>
+
+        <label for="amount">Jumlah Penumpang:</label>
+        <input type="number" id="amount" name="amount" required><br><br>
+
+        <button type="button" onclick="generateQRCode()">Generate QR Code</button>
+    </form>
+    <br>
+    <div id="qrcode"></div>
+
+    <script>
+        function generateQRCode() {
+            var name = document.getElementById("name").value;
+            var busNumber = document.getElementById("busNumber").value;
+            var amount = document.getElementById("amount").value;
+
+            if (name && busNumber && amount) {
+                var qrcode = new QRCode(document.getElementById("qrcode"), {
+                    text: "Name: " + name + "\nBus Number: " + busNumber + "\nAmount: " + amount,
+                    width: 128,
+                    height: 128
+                });
+            } else {
+                alert("Please fill out all fields.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Seating Chart</title>
+    <style>
+        .bus {
+            display: grid;
+            grid-template-columns: repeat(4, 50px);
+            grid-gap: 10px;
+            margin: 20px;
+        }
+        .seat {
+            width: 50px;
+            height: 50px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .seat.occupied {
+            background-color: #ff6b6b;
+        }
+        .seat.selected {
+            background-color: #6bff6b;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Bus Seating Chart</h1>
+    <div class="bus">
+        <!-- Row 1 -->
+        <div class="seat" data-seat="1A">1</div>
+        <div class="seat" data-seat="1B">2</div>
+        <div class="seat" data-seat="1C">3</div>
+        <div class="seat" data-seat="1D">4</div>
+        <div class="seat" data-seat="1D">5</div>
+        <div class="seat" data-seat="1D">6</div>
+        <div class="seat" data-seat="1D">7</div>
+        <div class="seat" data-seat="1D">8</div>
+        <div class="seat" data-seat="1D">9</div>
+        <div class="seat" data-seat="1D">10</div>
+        <div class="seat" data-seat="1D">11</div>
+        <div class="seat" data-seat="1D">12</div>
+        <div class="seat" data-seat="1D">13</div>
+        <div class="seat" data-seat="1D">14</div>
+        <div class="seat" data-seat="1D">15</div>
+        <div class="seat" data-seat="1D">16</div>
+        <!-- Row 2 -->
+        <div class="seat" data-seat="2A">17</div>
+        <div class="seat" data-seat="2B">18</div>
+        <div class="seat" data-seat="2C">19</div>
+        <div class="seat" data-seat="2C">20</div>
+        <div class="seat" data-seat="2D">21</div>
+        <div class="seat" data-seat="2D">22</div>
+        <div class="seat" data-seat="2A">23</div>
+        <div class="seat" data-seat="2B">24</div>
+        <div class="seat" data-seat="2C">25</div>
+        <div class="seat" data-seat="2D">26</div>
+        <div class="seat" data-seat="2D">27</div>
+        <div class="seat" data-seat="2A">28</div>
+        <div class="seat" data-seat="2B">29</div>
+        <div class="seat" data-seat="2C">30</div>
+        <div class="seat" data-seat="2D">31</div>
+        <div class="seat" data-seat="2D">32</div>
+        <!-- Row 3 -->
+        <div class="seat" data-seat="3A">33</div>
+        <div class="seat" data-seat="3B">34</div>
+        <div class="seat" data-seat="3C">35</div>
+        <div class="seat" data-seat="3D">36</div>
+        <div class="seat" data-seat="3A">37</div>
+        <div class="seat" data-seat="3B">38</div>
+        <div class="seat" data-seat="3C">39</div>
+        <div class="seat" data-seat="3D">40</div>
+        <div class="seat" data-seat="3A">41</div>
+        <div class="seat" data-seat="3B">42</div>
+        <div class="seat" data-seat="3C">43</div>
+        <div class="seat" data-seat="3D">44</div>
+        <div class="seat" data-seat="3A">45</div>
+        <div class="seat" data-seat="3B">46</div>
+        <div class="seat" data-seat="3C">47</div>
+        <div class="seat" data-seat="3D">48</div>
+        <!-- Row 4 -->
+        <div class="seat" data-seat="4A">40</div>
+        <div class="seat" data-seat="4B">50</div>
+        <div class="seat" data-seat="4C">51</div>
+        <div class="seat" data-seat="4D">52</div>
+        <div class="seat" data-seat="4A">53</div>
+        <div class="seat" data-seat="4B">54</div>
+        <div class="seat" data-seat="4C">55</div>
+        <div class="seat" data-seat="4D">56</div>
+        <div class="seat" data-seat="4A">57</div>
+        <div class="seat" data-seat="4B">58</div>
+        <div class="seat" data-seat="4C">59</div>
+        <div class="seat" data-seat="4D">60</div>
+        <div class="seat" data-seat="4A">61</div>
+        <div class="seat" data-seat="4B">62</div>
+        <div class="seat" data-seat="4C">63</div>
+        <div class="seat" data-seat="4D">64</div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.seat').forEach(seat => {
+            seat.addEventListener('click', () => {
+                seat.classList.toggle('selected');
+            });
+        });
+    </script>
+</body>
